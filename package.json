@@ -4,7 +4,7 @@
   "description": "this repro contain \r * actual code \r * test for each code",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll --verbose --coverage"
   },
   "repository": {
     "type": "git",
