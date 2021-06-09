@@ -22,7 +22,6 @@ describe('Stack test', () => {
         stack.push = 'banana'
         stack.push = 'orange'
         stack.push = 'watermelon'
-        console.log(stack);
         expect(stack.pop).toBe('watermelon')
         expect(stack.pop).toBe('orange')
         expect(stack.pop).toBe('banana')
@@ -32,7 +31,6 @@ describe('Stack test', () => {
         stack.push = 'banana'
         stack.push = 'orange'
         stack.push = 'watermelon'
-
         expect(stack.peek).toBe('watermelon')
         expect(stack.peek).toBe('watermelon')
         expect(stack.peek).toBe('watermelon')
