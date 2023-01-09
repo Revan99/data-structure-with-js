@@ -144,4 +144,21 @@ describe("testing linkedList", () => {
       );
     }
   });
+
+  it("should throw and error while trying to change the data of empty linked list", () => {
+    try {
+      ll.setDataAtIndex(5, 1);
+    } catch (error) {
+      expect(error).toBe(
+        `you can't change data of index ${3}, the linked list has length ${0}`
+      );
+    }
+  });
+  it("should change the data of selected index", () => {
+    ll.addToStart(new Node(1));
+    ll.addToStart(new Node(1));
+    ll.addToStart(new Node(1));
+    ll.setDataAtIndex(5, 1);
+    expect(ll.dataAt(1)).toBe(5);
+  });
 });

@@ -126,5 +126,23 @@ class LinkedList {
       return error;
     }
   }
+  setDataAtIndex(data, index) {
+    try {
+      if (index > this.length - 1)
+        throw new Error(
+          `you can't change data of index ${index}, the linked list has length ${this.length}`
+        );
+      let currentIndex = 0;
+      let currentNode = this.head;
+      while (currentIndex !== index) {
+        currentIndex++;
+        currentNode = currentNode.next;
+      }
+      currentNode.data = data;
+      return this;
+    } catch (error) {
+      return error;
+    }
+  }
 }
 module.exports = LinkedList;
